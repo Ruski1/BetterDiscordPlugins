@@ -9,7 +9,7 @@ class ColourBox{
     // Meta
     getName() { return "ColourBox"; }
     getDescription() { return "A colourpicker box for discord"; }
-    getVersion() { return "0.1.0"; }
+    getVersion() { return "0.1.1"; }
     getAuthor() { return "Ruski"; }
 
     // Settings  Panel
