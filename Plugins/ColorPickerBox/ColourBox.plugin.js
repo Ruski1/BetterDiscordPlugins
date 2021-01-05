@@ -1,4 +1,4 @@
-//META{"name":"ColourBox","displayName":"ColourBox", "source":"https://github.com/l0c4lh057/BetterDiscordStuff/blob/master/Plugins/Minespoiler/Minespoiler.plugin.js"}*//
+//META{"name":"ColourBox","displayName":"ColourBox", "source":"https://github.com/Ruski1/BetterDiscordPlugins/edit/main/Plugins/ColorPickerBox/ColourBox.plugin.js"}*//
 
 class ColourBox{
     // Constructor
@@ -31,7 +31,7 @@ class ColourBox{
             ZLibrary.PluginUpdater.checkForUpdate(
             this.getName(),
             this.getVersion(),
-            "https://raw.githubusercontent.com/Egrodo/DiscordPlugins/master/GameActivityToggle.plugin.js"
+            "https://raw.githubusercontent.com/Ruski1/BetterDiscordPlugins/main/Plugins/ColorPickerBox/ColourBox.plugin.js"
             );
         }
     }
