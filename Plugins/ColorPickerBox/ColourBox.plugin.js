@@ -1,4 +1,10 @@
-//META{"name":"ColourBox","displayName":"ColourBox", "source":"https://github.com/Ruski1/BetterDiscordPlugins/edit/main/Plugins/ColorPickerBox/ColourBox.plugin.js"}*//
+/**
+ * @name ColourBox
+ * @displayName ColourBox
+ * @source https://github.com/Ruski1/BetterDiscordPlugins/edit/main/Plugins/ColorPickerBox/ColourBox.plugin.js
+ * @authorId 399313915311292416
+ */
+
 
 class ColourBox{
     // Constructor
@@ -9,20 +15,12 @@ class ColourBox{
     // Meta
     getName() { return "ColourBox"; }
     getDescription() { return "A colourpicker box for discord"; }
-    getVersion() { return "0.1.0"; }
+    getVersion() { return "0.1.1"; }
     getAuthor() { return "Ruski"; }
 
     // Settings  Panel
     getSettingsPanel() {
-        let panel = $(`<form class="form" style="width:100%;"></form>`)[0];
-		new ZLibrary.Settings.SettingGroup(this.getName(), {shown:true}).appendTo(panel)
-		.append(
-			new ZLibrary.Settings.Switch("Clyde mode", "If you enable this option games will be sent as a Clyde message. Only you will see them, nobody else.", this.settings.sendAsClyde, (e)=>{
-				this.settings.sendAsClyde = e;
-				this.saveSettings();
-			})
-		);
-		return panel;
+		
 	}
     
     // Load/Unload
@@ -39,8 +37,6 @@ class ColourBox{
     unload() {
 
     }
-
-    // Events
 
     observer(e) {
     };
@@ -59,6 +55,7 @@ class ColourBox{
 
 	if (typeof window.ZeresLibrary !== "undefined") this.initialize();
 	else libraryScript.addEventListener("load", () => { this.initialize(); });
+	this.createButton()
     }
        
     stop() {
